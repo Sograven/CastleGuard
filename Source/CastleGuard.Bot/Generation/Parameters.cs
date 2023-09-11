@@ -15,13 +15,13 @@
                                                          'U', 'V', 'W', 'X', 'Y', 'Z' };
 
         public int Length { get; set; }
-        public bool UniqueSymbols { get; set; }
+        public bool IsRepeating { get; set; }
         public bool IncludeNumbers { get; set; }
         public bool IncludeSymbols { get; set; }
         public bool IncludeLowercase { get; set; }
         public bool IncludeUppercase { get; set; }
 
-        public List<char> GetSymbolSource()
+        public List<char> GetCharSource()
         {
             var source = new List<char>();
 
@@ -36,7 +36,7 @@
         public Parameters()
         {
             Length = 16;
-            UniqueSymbols = false;
+            IsRepeating = true;
             IncludeNumbers = true;
             IncludeSymbols = true;
             IncludeLowercase = true;
