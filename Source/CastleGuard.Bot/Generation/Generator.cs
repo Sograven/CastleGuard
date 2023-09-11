@@ -10,7 +10,7 @@
             List<char> source = parameters.GetCharSource();
 
             var random = new Random();
-            for (int i = 1; i < parameters.Length; i++)
+            for (int i = 0; i < parameters.Length; i++)
             {
                 int charIndex = random.Next(0, source.Count - 1);
                 password = string.Concat(password, source[charIndex]);
