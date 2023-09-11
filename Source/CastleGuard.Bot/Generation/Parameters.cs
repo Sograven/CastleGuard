@@ -31,7 +31,7 @@
             if (IncludeUppercase) source.AddRange(_uppercase);
 
             // Catch «ArgumentOutOfRangeException» exception in generation.
-            if (IsRepeating == true && Length < source.Count) Length = source.Count;
+            if (IsRepeating == false && Length < source.Count) Length = source.Count;
 
             return source;
         }
