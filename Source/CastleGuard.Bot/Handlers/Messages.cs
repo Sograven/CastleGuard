@@ -7,13 +7,9 @@ namespace CastleGuard.Bot.Handlers
     {
         public static async Task HandleMessagesAsync(ITelegramBotClient botClient, Message message, CancellationToken cancellationToken)
         {
-            if (message.Text is not null)
+            if (message.Text != null && message.Text.StartsWith('/'))
             {
-                await botClient.SendTextMessageAsync(
-                    chatId: message.Chat.Id,
-                    text: message.Text,
-                    cancellationToken: cancellationToken
-                    );
+                await Commands.HandleCommandsAsync(botClient, message, cancellationToken);
             }
         }
     }

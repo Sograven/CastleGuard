@@ -3,16 +3,16 @@
     internal class MarkdownParser
     {
         /// <summary>
-        /// Constant chars array used in Markdown markup.
+        /// Constant <see langword="char"/> array used in Markdown markup.
         /// </summary>
         private static readonly char[] _specialChars = new char[] { '_', '*', '[', ']', '(', ')', '~', '`', '>', '#',
                                                                     '+', '-', '+', '|', '{', '}', '.', '!' };
 
         /// <summary>
-        /// Parses Markdown markup symbols in string to non-markup characters.
+        /// Parses Markdown markup symbols in <see langword="string"/> to non-markup characters.
         /// </summary>
         /// <param name="text">String to parse.</param>
-        /// <returns>Parsed string.</returns>
+        /// <returns>Parsed <see langword="string"/>.</returns>
         public static string Parse(string text)
         {
             string parsedString = default!;
